@@ -7,10 +7,24 @@ YEAR - 1st
 
 
 
-**COLOR DETECTION**
-
-To detect color run Color_detection.cpp 
+#__COLOR DETECTION__
 
 
+To run this file type below command in color detection directory on cmd
+>$: g++ color_detection.cpp -o output pkg-config --cflags --libs opencv
+>$: ./output
+
+#__Contour Detection__
+
+To run this file type below command in contour detection directory on cmd
+>$: g++ contour_detection.cpp -o output pkg-config --cflags --libs opencv
+>$: ./output
+
+
+#__Path Finder__
+
+To run this file type below command in contour detection directory on cmd
+>$: g++ Path_finder.cpp -o output pkg-config --cflags --libs opencv
+>$: ./output
 
 

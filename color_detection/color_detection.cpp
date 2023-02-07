@@ -20,6 +20,8 @@ int main() {
     img = imread(path);
 	cvtColor(img, imghsv, COLOR_BGR2HSV);
 
+	//using trackbar to find the right color 
+
 	/*namedWindow("Trackbar", (640, 200));
 
 	createTrackbar("H Min", "Trackbar", &Hmin, 179);
@@ -29,18 +31,34 @@ int main() {
 	createTrackbar("V Min", "Trackbar", &Vmin, 255);
 	createTrackbar("V Max", "Trackbar", &Vmax, 255);*/
 
+	//applying changes of trackbar onto the image
 
+	/*
+	while (true)
+	{
+	Scalar lower(Hmin, Smin, Vmin);
+	Scalar upper(Hmax, Smax, Vmax);
 
-		Scalar lower(Hmin, Smin, Vmin);
-		Scalar upper(Hmax, Smax, Vmax);
+	inRange(imghsv, lower, upper, mask);
 
-		inRange(imghsv, lower, upper, mask);
+	imshow("Test_image", img);
+	imshow("HSV_image", imghsv);
+	imshow("mask_image", mask);
 
-		imshow("Test_image", img);
-		imshow("HSV_image", imghsv);
-		imshow("mask_image", mask);
+	waitKey(1);
+	}
+	*/
 
-		waitKey(0);
+	Scalar lower(Hmin, Smin, Vmin);
+	Scalar upper(Hmax, Smax, Vmax);
+
+	inRange(imghsv, lower, upper, mask);
+
+	imshow("Test_image", img);
+	imshow("HSV_image", imghsv);
+	imshow("mask_image", mask);
+
+	waitKey(0);
 
 	
 	return 0;
