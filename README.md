@@ -27,4 +27,10 @@ To run this file type below command in contour detection directory on cmd
 >$: g++ Path_finder.cpp -o output pkg-config --cflags --libs opencv
 >$: ./output
 
+#__Gate_finder__
+
+To run this file type below command in gate finder directory on cmd
+>$: g++ gate_finder.cpp -o output pkg-config --cflags --libs opencv
+>$: ./output
+
 
